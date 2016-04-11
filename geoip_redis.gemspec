@@ -1,4 +1,5 @@
-require File.join(__dir__, "lib", "geoip_redis", "version")
+$:.push File.expand_path("../lib", __FILE__)
+require "geoip_redis/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "geoip_redis"
