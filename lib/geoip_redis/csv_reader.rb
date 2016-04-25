@@ -6,7 +6,7 @@ module GeoipRedis
     HEADER = 1
     private_constant :HEADER
 
-    def read_by_batch(io, batch_size: 1000, &block)
+    def read_by_batch(io, batch_size = 1000, &block)
       batch = []
       CSV.new(io).each.drop(HEADER).each_with_index do |row, idx|
         batch << row
